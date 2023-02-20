@@ -1,5 +1,6 @@
 import React from "react";
 import Typical from "react-typical";
+import ScrollService from "../../../Utilites/ScrollService";
 import "./Profile.css";
 
 export default function Profile() {
@@ -35,7 +36,7 @@ export default function Profile() {
           <div className="profile-details-name">
             <span className="primary-text">
               {" "}
-              HEllo, I'm <span className="gighlighted-text">Yakeen</span>
+              Hello, I'm <span className="gighlighted-text">Yakeen</span>
             </span>
           </div>
           <div className="profile-details-role">
@@ -46,36 +47,37 @@ export default function Profile() {
                 <Typical
                   loop={Infinity}
                   steps={[
-                    "Ethusiastic Dev 👩‍💻",
+                    "Enthusiastic Dev 😎",
                     1000,
-                    "Full Stack Devloper 💻",
+                    "Full stack Developer 💻",
                     1000,
-                    "MERN Stack Dev 😎",
+                    "Mern stack Dev 📱",
                     1000,
-                    "Cross platform Dev 🔀",
+                    "Cross Platform Dev 🔴",
                     1000,
-                    "React/React native Dev 📱",
+                    "React/React Native 🌐",
                     1000,
                   ]}
                 />
               </h1>
-              <span className="profile-role-tagline">
-                Knack of Building application with front and back end
-                operations.
-              </span>
+            </span>
+            <span className="profile-role-tagline">
+              Knack of Building application with front and back end
+              operations.
             </span>
           </div>
-        <div className="profile-options">
-          <button className="btn primary-btn"> Hire Me </button>
-          <a href="resume.pdf" download="Yakeen resume.pdf">
-            <button className="btn highlighted-btn">Get Resume</button>
-          </a>
-        </div>
+          <div className="profile-options">
+            <button className="btn primary-btn" onClick={() => ScrollService.scrollHandler.scrollToHireMe()}> Hire Me </button>
+            <a href="resume.pdf" download="Yakeen resume.pdf">
+              <button className="btn highlighted-btn">Get Resume</button>
+            </a>
+          </div>
         </div>
         <div className="profile-picture">
           <div className="profile-picture-background"></div>
         </div>
       </div>
     </div>
+
   );
 }
